@@ -8,27 +8,27 @@
 </head>
 <body>
 <jsp:useBean
-	id="myBean"
-	scope="session"
+	id="urlBean"
+	scope="request"
 	class="uk.ac.dundee.computing.aec.stores.URLStorage" />
 
 
 <ul>
-<li><a href="/aec/ac32007examples/arequest/3456">/ac32007examples/arequest/3456</a></li>
-<li><a href="/aec/ac32007examples/arequest/34444444">/ac32007examples/arequest/34444444</a></li>
-<li><a href="/aec/ac32007examples/arequest/2222">/ac32007examples/arequest/2222</a></li>
-<li><a href="/aec/ac32007examples/arequest/1234567890">/ac32007examples/arequest/1234567890</a></li>
+<li><a href="/ac32007examples/TestURL/3456">/ac32007examples/TestURL/3456</a></li>
+<li><a href="/ac32007examples/TestURL/34444444">/ac32007examples/TestURL/34444444</a></li>
+<li><a href="/ac32007examples/TestURL/2222">/ac32007examples/TestURL/2222</a></li>
+<li><a href="/ac32007examples/TestURL/1234567890">/ac32007examples/TestURL/1234567890</a></li>
 </ul>
 
-<form action="/aec/ac32007examples/TestURL" method="POST">
+<form action="/ac32007examples/TestURL" method="POST">
 <input name="url">
 <input type="submit"  value="Go!">
 </form>
 
 <p>The URI is: 
 <jsp:getProperty
-	name="myBean"
-	property="Url"/>
+	name="urlBean"
+	property="url"/>
 	</p>
 
 </body>
