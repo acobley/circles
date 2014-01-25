@@ -16,7 +16,6 @@ try{
 		 %><p>Can not get Class <%=E%><%
 }
 try {
-//Connection MyConnection= DriverManager.getConnection("jdbc:mysql://arlia.computing.dundee.ac.uk/student200704","student200704","ac31004");
 Connection MyConnection= DriverManager.getConnection("jdbc:mysql://localhost/Faultdb","root","Cl1m8t3;");
 
 Statement st    = null;
