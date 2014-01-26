@@ -109,7 +109,7 @@ public class Dbutils {
 				+ "INDEX `fk_fault_section1_idx` (`section_idsection` ASC),"
 				+ "CONSTRAINT `fk_fault_author`"
 				+ "  FOREIGN KEY (`author_idauthor`)"
-				+ " REFERENCES `Faultdb2`.`author` (`idauthor`)"
+				+ " REFERENCES `author` (`idauthor`)"
 				+ "ON DELETE NO ACTION" + " ON UPDATE NO ACTION,"
 				+ "CONSTRAINT `fk_fault_section1`"
 				+ " FOREIGN KEY (`section_idsection`)"
