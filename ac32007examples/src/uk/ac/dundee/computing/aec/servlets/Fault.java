@@ -21,7 +21,7 @@ import uk.ac.dundee.computing.aec.lib.*;
 				"/Fault/*"
 		}, 
 		initParams = { 
-				@WebInitParam(name = "data-source", value = "jdbc/Fault.db")
+				@WebInitParam(name = "data-source", value = "jdbc/Faultdb")
 		})
 public class Fault extends HttpServlet {
 	private static final long serialVersionUID = 1L;
