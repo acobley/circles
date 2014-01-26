@@ -2,6 +2,7 @@ package uk.ac.dundee.computing.aec.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import uk.ac.dundee.computing.aec.lib.*;
 /**
  * Servlet implementation class Fault
  */
@@ -31,7 +33,17 @@ public class Fault extends HttpServlet {
     public Fault() {
         super();
         // TODO Auto-generated constructor stub
+       
     }
+    
+    /**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+		Dbutils db = new Dbutils();
+        _ds=db.assemble(config);
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
