@@ -13,6 +13,7 @@
 <body>
 <h1>Faults</h1>
 <%
+System.out.println("In render");
 List<FaultsStore> lFaults = (List<FaultsStore>)request.getAttribute("Faults");
 if (lFaults==null){
  %>

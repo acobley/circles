@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import uk.ac.dundee.computing.aec.lib.*;
+
 import uk.ac.dundee.computing.aec.stores.*;
 import uk.ac.dundee.computing.aec.models.*;
 /**
@@ -22,7 +23,7 @@ import uk.ac.dundee.computing.aec.models.*;
  */
 @WebServlet(
 		urlPatterns = { 
-				"/Fault", 
+				"/Faults", 
 				"/Fault/*"
 		}, 
 		initParams = { 
@@ -55,6 +56,8 @@ public class Fault extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("Starting GET");
+		String args[]=Convertors.SplitRequestPath(request);
 		Iterator<FaultsStore> iterator;
 		FaultModel Faults = new FaultModel(); //Create a new instance of the model
 
@@ -63,7 +66,7 @@ public class Fault extends HttpServlet {
 
 		/* If we want to forward to a jsp page do this */
 		request.setAttribute("Faults", psl); //Set a bean with the list in it
-		RequestDispatcher rd = request.getRequestDispatcher("RenderFaults.jsp"); 
+		RequestDispatcher rd = request.getRequestDispatcher("/RenderFaults.jsp"); 
 
 		rd.forward(request, response);
 	}

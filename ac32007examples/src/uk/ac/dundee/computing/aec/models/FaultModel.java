@@ -69,7 +69,7 @@ public class FaultModel {
 		}
 
 		try {
-			System.out.println("Bugger that I'm doing a finally");
+			
 			Conn.close();
 		} catch (Exception ex) {
 			return null;
