@@ -79,7 +79,7 @@ public class Dbutils {
 			return;
 		}
 		String sqlQuery = "CREATE TABLE IF NOT EXISTS `author` ("
-				+ "`idauthor` INT NOT NULL," + "`name` VARCHAR(45) NULL,"
+				+ "`idauthor` INT NOT NULL AUTO_INCREMENT," + "`name` VARCHAR(45) NULL,"
 				+ "PRIMARY KEY (`idauthor`))" + "ENGINE = InnoDB;";
 		try {
 			pmst = Conn.prepareStatement(sqlQuery);
@@ -89,7 +89,7 @@ public class Dbutils {
 			return;
 		}
 		sqlQuery = "CREATE TABLE IF NOT EXISTS `section` ("
-				+ "`idsection` INT NOT NULL," + "`name` VARCHAR(45) NULL,"
+				+ "`idsection` INT NOT NULL AUTO_INCREMENT," + "`name` VARCHAR(45) NULL,"
 				+ "PRIMARY KEY (`idsection`))" + "ENGINE = InnoDB;";
 
 		try {
@@ -100,7 +100,7 @@ public class Dbutils {
 			return;
 		}
 		sqlQuery = "CREATE TABLE IF NOT EXISTS `fault` ("
-				+ "`idfault` INT NOT NULL," + "`summay` VARCHAR(45) NULL,"
+				+ "`idfault` INT NOT NULL AUTO_INCREMENT," + "`summay` VARCHAR(45) NULL,"
 				+ "`details` VARCHAR(100) NULL,"
 				+ "`author_idauthor` INT NOT NULL,"
 				+ "`section_idsection` INT NOT NULL,"
@@ -122,5 +122,23 @@ public class Dbutils {
 			System.out.println("Can not create table "+ex);
 			return;
 		}
+		sqlQuery="INSERT INTO `author` (`name`) VALUES ('Andy'),('Tracey'),('Tom'),('Bill');";
+		try {
+			pmst = Conn.prepareStatement(sqlQuery);
+			pmst.executeUpdate();
+		} catch (Exception ex) {
+			System.out.println("Can not create table "+ex);
+			return;
+		}
+		sqlQuery="INSERT INTO `section` (`name`) VALUES ('Cassandra'),('Hadoop'),('Debian');";
+		try {
+			pmst = Conn.prepareStatement(sqlQuery);
+			pmst.executeUpdate();
+		} catch (Exception ex) {
+			System.out.println("Can not create table "+ex);
+			return;
+		}
+
+		
 	}
 }
