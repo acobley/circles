@@ -59,7 +59,7 @@ public class FaultModel {
 			while (rs.next()) {
 				System.out.println("Getting RS");
 				ps = new FaultsStore();
-				ps.setFaultid(rs.getString("faultid"));
+				ps.setFaultid(rs.getString("idfault"));
 				ps.setFaultSummary(rs.getString("summary"));
 				psl.add(ps);
 			}

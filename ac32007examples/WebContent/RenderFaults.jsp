@@ -11,15 +11,16 @@
 <title>Faults List</title>
 </head>
 <body>
+<h1>Faults</h1>
 <%
 List<FaultsStore> lFaults = (List<FaultsStore>)request.getAttribute("Faults");
 if (lFaults==null){
  %>
-	<h1>Error no Hashmap</h1>
+	<p>No faults found</p>
 	<% 
 }else{
 %>
-<h1>Faults</h1>
+
 
 <% 
 Iterator<FaultsStore> iterator;
@@ -30,7 +31,7 @@ while (iterator.hasNext()){
 	FaultsStore md = (FaultsStore)iterator.next();
 	
 	%>
-	<a href="/Fault/<%=md.getFaultid() %>" ><%=md.getFaultSummary() %></a><br/><%
+	<a href="/ac32007examples/Fault/<%=md.getFaultid() %>" ><%=md.getFaultSummary() %></a><br/><%
 	
 }
 }

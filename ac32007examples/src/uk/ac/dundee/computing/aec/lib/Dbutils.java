@@ -2,6 +2,7 @@ package uk.ac.dundee.computing.aec.lib;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.naming.Binding;
 import javax.naming.Context;
@@ -100,7 +101,7 @@ public class Dbutils {
 			return;
 		}
 		sqlQuery = "CREATE TABLE IF NOT EXISTS `fault` ("
-				+ "`idfault` INT NOT NULL AUTO_INCREMENT," + "`summay` VARCHAR(45) NULL,"
+				+ "`idfault` INT NOT NULL AUTO_INCREMENT," + "`summary` VARCHAR(45) NULL,"
 				+ "`details` VARCHAR(100) NULL,"
 				+ "`author_idauthor` INT NOT NULL,"
 				+ "`section_idsection` INT NOT NULL,"
@@ -122,22 +123,48 @@ public class Dbutils {
 			System.out.println("Can not create table "+ex);
 			return;
 		}
-		sqlQuery="INSERT INTO `author` (`name`) VALUES ('Andy'),('Tracey'),('Tom'),('Bill');";
+		ResultSet rs=null;
+		sqlQuery="Select count(name) from author as rowcount";
 		try {
 			pmst = Conn.prepareStatement(sqlQuery);
-			pmst.executeUpdate();
+			rs=pmst.executeQuery();
+			if(rs.next()) {
+			    int rows = rs.getInt(1);
+			    System.out.println("Number of Rows " + rows);
+			    if (rows==0){
+			    	sqlQuery="INSERT INTO `author` (`name`) VALUES ('Andy'),('Tracey'),('Tom'),('Bill');";
+					try {
+						pmst = Conn.prepareStatement(sqlQuery);
+						pmst.executeUpdate();
+					} catch (Exception ex) {
+						System.out.println("Can not insert names in authors "+ex);
+						return;
+					}
+					sqlQuery="INSERT INTO `section` (`name`) VALUES ('Cassandra'),('Hadoop'),('Debian');";
+					try {
+						pmst = Conn.prepareStatement(sqlQuery);
+						pmst.executeUpdate();
+					} catch (Exception ex) {
+						System.out.println("Can not insert names in sections "+ex);
+						return;	
+					}
+					sqlQuery="INSERT INTO `fault` (`summary`,`details`,`author_idauthor`,`section_idsection`) VALUES ('Startup fails on a pi','Because the number of processors returned is zero startup fails','1','1');";
+					try {
+						pmst = Conn.prepareStatement(sqlQuery);
+						pmst.executeUpdate();
+					} catch (Exception ex) {
+						System.out.println("Can not insert default fault "+ex);
+						return;	
+					}
+			    }
+			}
+			
 		} catch (Exception ex) {
-			System.out.println("Can not create table "+ex);
+			System.out.println("Can not select count "+ex);
 			return;
 		}
-		sqlQuery="INSERT INTO `section` (`name`) VALUES ('Cassandra'),('Hadoop'),('Debian');";
-		try {
-			pmst = Conn.prepareStatement(sqlQuery);
-			pmst.executeUpdate();
-		} catch (Exception ex) {
-			System.out.println("Can not create table "+ex);
-			return;
-		}
+		
+	
  
 		
 	}

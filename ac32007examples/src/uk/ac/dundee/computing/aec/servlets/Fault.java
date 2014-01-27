@@ -56,14 +56,14 @@ public class Fault extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Iterator<FaultsStore> iterator;
-		FaultModel Faults = new FaultModel();
+		FaultModel Faults = new FaultModel(); //Create a new instance of the model
 
 		Faults.setDatasource(_ds);
-		LinkedList<FaultsStore> psl = Faults.getFaults();
+		LinkedList<FaultsStore> psl = Faults.getFaults(); // Get a list of all faults
 
 		/* If we want to forward to a jsp page do this */
-		request.setAttribute("Faults", psl);
-		RequestDispatcher rd = request.getRequestDispatcher("RenderFaults.jsp");
+		request.setAttribute("Faults", psl); //Set a bean with the list in it
+		RequestDispatcher rd = request.getRequestDispatcher("RenderFaults.jsp"); 
 
 		rd.forward(request, response);
 	}
