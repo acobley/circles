@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource type="javax.sql.DataSource"
+            name="jdbc/Faultdb"
+            factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/Faultdb"
+            username="root" 
+            password="Cl1m8t3;" 
+/>
+
+
+</Context>
