@@ -1,7 +1,10 @@
 package uk.ac.dundee.computing.aec.servlets;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.LinkedList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
@@ -12,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import uk.ac.dundee.computing.aec.lib.*;
+import uk.ac.dundee.computing.aec.stores.*;
+import uk.ac.dundee.computing.aec.models.*;
 /**
  * Servlet implementation class Fault
  */
@@ -50,6 +55,17 @@ public class Fault extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		Iterator<FaultsStore> iterator;
+		FaultModel Faults = new FaultModel();
+
+		Faults.setDatasource(_ds);
+		LinkedList<FaultsStore> psl = Faults.getFaults();
+
+		/* If we want to forward to a jsp page do this */
+		request.setAttribute("Faults", psl);
+		RequestDispatcher rd = request.getRequestDispatcher("RenderFaults.jsp");
+
+		rd.forward(request, response);
 	}
 
 	/**
