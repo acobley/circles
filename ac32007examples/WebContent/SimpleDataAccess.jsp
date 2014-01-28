@@ -27,6 +27,7 @@ ResultSet rs;
 	 %><tr><td><%=rs.getString("summary")%></td> 
 	 <td><%=rs.getString("detail")%></td> 
 	 <td><%=rs.getInt("sectionid")%></td> 
+
      </tr> 	
  		<% 
  }
