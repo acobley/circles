@@ -63,7 +63,7 @@ public class Dbutils {
 				throw new ServletException(dataSourceName
 						+ " is an unknown data-source.");
 		} catch (NamingException e) {
-			throw new ServletException("Cant find datasource name" + e);
+			throw new ServletException("Cant find datasource name " +dataSourceName+" Error "+ e);
 		}
 		 CreateSchema(_ds);
 		return _ds;
