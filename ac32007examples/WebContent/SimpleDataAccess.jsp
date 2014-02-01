@@ -32,7 +32,7 @@ ResultSet rs;
  		<% 
  }
  rs.close();
- MyConnection.close();
+ //MyConnection.close();
  %>
  </table><% 
  }catch(Exception E){
