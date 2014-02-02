@@ -35,18 +35,22 @@ public class TweetModel {
 		this.cluster=cluster;
 	}
 	
-	public LinkedList<TweetStore> getTweets(){
+	public LinkedList<TweetStore> getTweets() {
 		LinkedList<TweetStore> tweetList = new LinkedList<TweetStore>();
 		Session session = cluster.connect("keyspace2");
-		
-		PreparedStatement statement = session.prepare("SELECT * from Tweets");
+
+		PreparedStatement statement = session.prepare("SELECT * from tweets");
 		BoundStatement boundStatement = new BoundStatement(statement);
-		ResultSet rs=  session.execute(boundStatement);
-		for (Row row : rs) {
-		    TweetStore ts = new TweetStore();
-		    ts.setTweet(row.getString("tweet"));
-		    ts.setUser(row.getString("artist"));
-		    tweetList.add(ts);
+		ResultSet rs = session.execute(boundStatement);
+		if (rs.isExhausted()) {
+			System.out.println("No Tweets returned");
+		} else {
+			for (Row row : rs) {
+				TweetStore ts = new TweetStore();
+				ts.setTweet(row.getString("tweet"));
+				ts.setUser(row.getString("user"));
+				tweetList.add(ts);
+			}
 		}
 		session.close();
 		return tweetList;
