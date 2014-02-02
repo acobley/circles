@@ -37,7 +37,8 @@ public class TweetModel {
 	
 	public LinkedList<TweetStore> getTweets(){
 		LinkedList<TweetStore> tweetList = new LinkedList<TweetStore>();
-		Session session = cluster.connect();
+		Session session = cluster.connect("keyspace2");
+		
 		PreparedStatement statement = session.prepare("SELECT * from Tweets");
 		BoundStatement boundStatement = new BoundStatement(statement);
 		ResultSet rs=  session.execute(boundStatement);
