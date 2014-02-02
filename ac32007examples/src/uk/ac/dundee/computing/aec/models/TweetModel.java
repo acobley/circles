@@ -1,5 +1,19 @@
 package uk.ac.dundee.computing.aec.models;
 
+/*
+ * Expects a cassandra columnfamily defined as
+ * use keyspace2;
+ * CREATE TABLE Tweets (
+ * user varchar,
+ *  interaction_time timeuuid,
+ *  tweet varchar,
+ *  PRIMARY KEY (user)
+ * ) WITH CLUSTERING ORDER BY (interaction_time DESC);
+ * To manually generate a UUID use:
+ * http://www.famkruithof.net/uuid/uuidgen
+ */
+
+
 import java.util.LinkedList;
 
 import com.datastax.driver.core.BoundStatement;
