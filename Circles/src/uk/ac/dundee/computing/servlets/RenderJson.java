@@ -38,6 +38,7 @@ public class RenderJson extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Object temp=request.getAttribute("Data");
+		response.setHeader("Access-Control-Allow-Origin", "*");
 		Class c = temp.getClass();
 		String className=c.getName();
 		if (className.compareTo("java.util.LinkedList")==0){ //Deal with a linked list
