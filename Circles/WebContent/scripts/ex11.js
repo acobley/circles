@@ -25,7 +25,7 @@ circles.attr("cx", function(d){
 }
 
 function loadData(){
-   d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles",function(error,data){
+   d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles/10",function(error,data){
    if (error){
       console.log(error)
    }else{
