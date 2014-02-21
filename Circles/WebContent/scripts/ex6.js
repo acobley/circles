@@ -7,7 +7,7 @@ d3.select("body").selectAll("div")
    .append("div")
    .attr("class","bar")
    .style("height",function(d){
-      return d+"px";
+      return 2*d+"px";
       })
       .style("background-color",function(d){
       return "#"+2*d+2*d+2*d;

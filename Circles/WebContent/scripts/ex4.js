@@ -5,9 +5,11 @@ d3.select("body").selectAll("p")
    .data(dataset)
    .enter()
    .append("p")
-   .text(function(d){
-      return "new Paragraph" + d;
-      });
+   .text(Bob );
    }
 
 window.onload= d3Draw;
+
+function Bob(d){
+    return "new Paragraph" + d;
+    }
