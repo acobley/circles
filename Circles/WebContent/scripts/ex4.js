@@ -10,6 +10,6 @@ d3.select("body").selectAll("p")
 
 window.onload= d3Draw;
 
-function Bob(d){
-    return "new Paragraph" + d;
+function Bob(data){
+    return "new Paragraph" + data;
     }

@@ -36,7 +36,7 @@ function d3Update(dataset){
 	.data(dataset)
 	.transition()
 	.duration(500)
-	.ease("linear");
+	.ease("bounce");
 
 	circles.attr("cx", function(d){
 	    return d.x;
