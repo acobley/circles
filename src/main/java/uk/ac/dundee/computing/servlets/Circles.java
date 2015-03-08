@@ -72,7 +72,8 @@ public class Circles extends HttpServlet {
 			}
 		}
 		request.setAttribute("Data", ccl);
-		RequestDispatcher rdjson=request.getRequestDispatcher("/RenderJson");
+		//RequestDispatcher rdjson=request.getRequestDispatcher("/RenderJson");
+                RequestDispatcher rdjson=request.getRequestDispatcher("/index.jsp");
 		rdjson.forward(request,response);
 	}
 	
