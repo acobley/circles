@@ -2,14 +2,14 @@ package uk.ac.dundee.computing.stores;
 
 public class Town {
    private String name;
-   private float lat;
-   private float lng;
+   private double lat;
+   private double lng;
    private int population;
 	public Town(){
 		
 	}
 	
-	public boolean setTown(String Name, float lat, float lng,int Population){
+	public boolean setTown(String Name, double lat, double lng,int Population){
 		name=Name;
 		this.lat=lat;
 		this.lng=lng;
@@ -21,11 +21,11 @@ public class Town {
 		return name;
 	}
 	
-	public float getlat(){
+	public double getlat(){
 		return lat;
 	}
 	
-	public float getlng(){
+	public double getlng(){
 		return lng;
 	}
 	
