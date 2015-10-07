@@ -16,5 +16,6 @@
         <p><a href="/Circles/Circles">Json circles</a></p>
         <h1>Towns Data Generator</h1>
         <p><a href="/Circles/Towns/50">Json circles</a></p>
+        <hr>
     </body>
 </html>
