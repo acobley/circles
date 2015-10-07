@@ -9,13 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Circles and towns JSON generator</title>
     </head>
     <body>
         <h1>Circles Data Generator</h1>
         <p><a href="/Circles/Circles">Json circles</a></p>
         <h1>Towns Data Generator</h1>
-        <p><a href="/Circles/Towns/50">Json circles</a></p>
+        <p><a href="/Circles/Towns/50">Json towns</a></p>
         <hr>
     </body>
 </html>
