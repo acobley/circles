@@ -23,7 +23,7 @@ public class Town {
 		this.lat=lat;
 		this.lng=lng;
 		this.population=Population;
-                this.county=county;
+                this.county=County;
 		return false;
 	}
 	
@@ -42,7 +42,7 @@ public class Town {
 	public int getPopulation(){
 		return population;
 	}
-        public String getcounty(){
+        public String getCounty(){
             return county;
         }
         
