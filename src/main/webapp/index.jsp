@@ -13,6 +13,7 @@
     </head>
     <body>
         <h1>Circles Data Generator</h1>
+        <P>Please select an option</p>
         <p><a href="/Circles/Circles">Json circles</a></p>
         <hr>
         <h1>Towns Data Generator</h1>
