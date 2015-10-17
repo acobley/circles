@@ -2043,9 +2043,7 @@ String county[]={
     public Towns() {
         super();
         // TODO Auto-generated constructor stub
-        for (int i=0;i<name.length;i++){
-            Available.add(new Integer(i));
-        }
+        
             
     }
 
@@ -2063,6 +2061,10 @@ String county[]={
 		// TODO Auto-generated method stub
 		Convertors convertor = new Convertors();
 		String args[]=Convertors.SplitRequestPath(request);
+                Available=new ArrayList();
+                for (int i=0;i<name.length;i++){
+            Available.add(new Integer(i));
+        }
 		for (int i=0;i<args.length;i++){
 			System.out.println("i "+i+" :"+args[i]);
 		}
@@ -2090,10 +2092,12 @@ String county[]={
 		 LinkedList<Town> ttl= new LinkedList();
 		 for (int i=0;i<num;i++){
                         
-                         int aTown=(int)(Available.size()*Math.random());
+                         int aTown=(int)((Available.size()-1)*Math.random());
+                         System.out.println("aTown : "+aTown);
                          int iTown=(int)(Available.get(aTown));
+                         System.out.println(" : "+iTown);
 			 Town tt=new Town();
-//System.out.println("Size "+Available.size()+" : "+aTown+"||"+iTown);
+System.out.println("Size "+Available.size()+" : "+aTown+"||"+iTown);
 			int Population=(int)(20000+150000*Math.random());
 			 tt.setTown(name[iTown],
                                  dLat[iTown],
