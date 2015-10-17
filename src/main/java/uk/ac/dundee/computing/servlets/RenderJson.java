@@ -98,7 +98,7 @@ public class RenderJson extends HttpServlet {
 	                
 	                 Object rt= meth.invoke(Value);
 	                 if (rt!=null){
-	                	 System.out.println(Name+" Return "+ rt);
+	                	 //System.out.println(Name+" Return "+ rt);
 	                	 try{
 	                		 Record.put(Name,rt);
 	                	 }catch (Exception JSONet){

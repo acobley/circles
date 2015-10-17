@@ -2,6 +2,7 @@ package uk.ac.dundee.computing.servlets;
 
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -22,6 +23,7 @@ import uk.ac.dundee.computing.stores.Town;
 public class Towns extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	LinkedList<Town> ccl= new LinkedList();   
+        ArrayList<Integer> Available=new ArrayList();
      
 	String name[]={
             "Aaron's Hill",
@@ -2041,6 +2043,10 @@ String county[]={
     public Towns() {
         super();
         // TODO Auto-generated constructor stub
+        for (int i=0;i<name.length;i++){
+            Available.add(new Integer(i));
+        }
+            
     }
 
 	/**
@@ -2083,9 +2089,11 @@ String county[]={
 	private LinkedList<Town>  MakeTowns(int num){
 		 LinkedList<Town> ttl= new LinkedList();
 		 for (int i=0;i<num;i++){
-                         int iTown=(int)(name.length*Math.random());
+                        
+                         int aTown=(int)(Available.size()*Math.random());
+                         int iTown=(int)(Available.get(aTown));
 			 Town tt=new Town();
-
+//System.out.println("Size "+Available.size()+" : "+aTown+"||"+iTown);
 			int Population=(int)(20000+150000*Math.random());
 			 tt.setTown(name[iTown],
                                  dLat[iTown],
@@ -2093,6 +2101,7 @@ String county[]={
                                  Population,
                                  county[iTown]);
 			 ttl.add(tt);
+                         Available.remove(aTown);
 		 }
 		 return ttl;
 	}
