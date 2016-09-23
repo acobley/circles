@@ -25,6 +25,7 @@ circles.attr("cx", function(d){
 function loadData(){
    d3.csv("data1.txt",function(error,data){
    if (error){
+      console.log("That file doesn't exist")
       console.log(error)
    }else{
       d3Draw(data);
