@@ -58,7 +58,7 @@ function loadData(){
 		
 		updateData();
 	});
-   d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles/10",function(error,data){
+   d3.json("http://ac32007a.cloudapp.net:8080/Circles/Circles/10",function(error,data){
    if (error){
       console.log(error)
    }else{
@@ -70,7 +70,7 @@ function loadData(){
  
 function updateData(){
   
-   d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles/20",function(error,data){
+   d3.json("http://ac32007a.cloudapp.net:8080/Circles/Circles/20",function(error,data){
    if (error){
       console.log(error)
    }else{
