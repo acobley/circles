@@ -19,6 +19,6 @@
         <h1>Towns Data Generator</h1>
         <p><a href="/Circles/Towns/50">Json towns</a></p>
         <hr>
-        <p>26th Sept 2017 @ 8:41</p>
+        <p>26th Sept 2017 @ 10:55</p>
     </body>
 </html>
