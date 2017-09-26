@@ -59,7 +59,7 @@ function loadData() {
 
 function updateData() {
 
-	d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles/10", function(
+	d3.json("http://35.188.184.73/Circles/Circles/10", function(
 			error, data) {
 		if (error) {
 			console.log(error)
