@@ -4,6 +4,9 @@
     Author     : andycobley
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,6 +22,9 @@
         <h1>Towns Data Generator</h1>
         <p><a href="/Circles/Towns/50">Json towns</a></p>
         <hr>
-        <p>26th Sept 2017 @ 10:55</p>
+        <p><%
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+Date date = new Date();%>
+<%=date%></p>
     </body>
 </html>
