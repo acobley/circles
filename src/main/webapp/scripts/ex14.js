@@ -35,8 +35,8 @@ function d3Update(dataset){
 	var circles=svg.selectAll("circle")
 	.data(dataset)
 	.transition()
-	.duration(5000)
-	.ease("bounce");
+	.duration(10000)
+	.ease("Circle");
 
 	circles.attr("cx", function(d){
 	    return d.x;
