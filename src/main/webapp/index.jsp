@@ -25,7 +25,10 @@
         <p><%
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 Date date = new Date();%>
-<%=date%></p>
+<%=date%></p
+        <hr>
+        <h2>D3 Examples</h2>
+        <p><a href="/Ex1.html">Example 1</a></p>
         <p>&copy; Andy Cobley @ Computing dundee university</p>
     </body>
 </html>
