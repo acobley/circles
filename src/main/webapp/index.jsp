@@ -26,6 +26,6 @@
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 Date date = new Date();%>
 <%=date%></p>
-        <p>&copy; Andy Cobley @ Computing dundee</p>
+        <p>&copy; Andy Cobley @ Computing dundee university</p>
     </body>
 </html>
