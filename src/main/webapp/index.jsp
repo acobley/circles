@@ -32,6 +32,6 @@ Date date = new Date();%>
         <% for (int i=1;i<15;i++){ %>
         <p><a href="Ex<%=i%>.html">Example <%=i %></a></p>
         <% } %>
-        <p>&copy; Andy Cobley @ Computing dundee university</p>
+        <p>&copy; Andy Cobley @ Computing dundee university.</p>
     </body>
 </html>
