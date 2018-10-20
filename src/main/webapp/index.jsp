@@ -37,6 +37,6 @@ Date date = new Date();%>
         }
                 }%>
         </ul>
-        <p>&copy; Andy Cobley @ Computing dundee university.</p>
+        <p>&copy; Andy Cobley @ Computing Dundee University.</p>
     </body>
 </html>
