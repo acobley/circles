@@ -31,7 +31,10 @@ Date date = new Date();%>
         <p>Not all examples ate available at the moment</p>
         <% for (int i=1;i<15;i++){ %>
         <p><a href="Ex<%=i%>.html">Example <%=i %></a></p>
-        <% } %>
+        <% if (i==10){
+            %><p><a href="Ex<%=i%>a.html">Example <%=i%>a</a></p><%
+        }
+                }%>
         <p>&copy; Andy Cobley @ Computing dundee university.</p>
     </body>
 </html>
