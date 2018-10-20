@@ -29,12 +29,14 @@ Date date = new Date();%>
         <hr>
         <h2>D3 Examples</h2>
         <p>Not all examples ate available at the moment</p>
+        <ul>
         <% for (int i=1;i<15;i++){ %>
-        <p><a href="Ex<%=i%>.html">Example <%=i %></a></p>
+        <li><a href="Ex<%=i%>.html">Example <%=i %></a></li>
         <% if (i==10){
-            %><p><a href="Ex<%=i%>a.html">Example <%=i%>a</a></p><%
+            %><li><a href="Ex<%=i%>a.html">Example <%=i%>a</a></li><%
         }
                 }%>
+        </ul>
         <p>&copy; Andy Cobley @ Computing dundee university.</p>
     </body>
 </html>
