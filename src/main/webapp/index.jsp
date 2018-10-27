@@ -40,6 +40,6 @@ Date date = new Date();%>
                 }%>
         </ul>
         <p>&copy; Andy Cobley @ Computing Dundee University.</p>
-        <p>Uxtest</p>
+        <p>Branch Uxtest</p>
     </body>
 </html>
