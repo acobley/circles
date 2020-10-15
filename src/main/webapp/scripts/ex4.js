@@ -5,7 +5,7 @@ d3.select("body").selectAll("p")
    .data(dataset)
    .enter()
    .append("p")
-   .text(Bob );
+   .text(Bob);
    }
 
 window.onload= d3Draw;

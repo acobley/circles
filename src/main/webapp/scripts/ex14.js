@@ -35,8 +35,8 @@ function d3Update(dataset){
 	var circles=svg.selectAll("circle")
 	.data(dataset)
 	.transition()
-	.duration(10000)
-	.ease("Circle");
+	.duration(2000)
+	.ease("bounce");
 
 	circles.attr("cx", function(d){
 	    return d.x;
@@ -58,7 +58,7 @@ function loadData(){
 		
 		updateData();
 	});
-   d3.json("http://35.188.184.73/Circles/Circles/20",function(error,data){
+   d3.json("http://35.211.183.112/Circles/Circles/20",function(error,data){
    if (error){
       console.log(error)
    }else{
@@ -70,7 +70,7 @@ function loadData(){
  
 function updateData(){
   
-   d3.json("http://35.188.184.73/Circles/Circles/20",function(error,data){
+   d3.json("http://35.211.183.112/Circles/Circles/20",function(error,data){
    if (error){
       console.log(error)
    }else{

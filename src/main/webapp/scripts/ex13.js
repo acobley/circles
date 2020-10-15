@@ -47,7 +47,7 @@ function loadData() {
 
 		updateData();
 	});
-	d3.json("http://35.188.184.73/Circles/Circles/10", function(
+	d3.json("http://35.211.183.112/Circles/Circles/10", function(
 			error, data) {
 		if (error) {
 			console.log(error)
@@ -59,7 +59,7 @@ function loadData() {
 
 function updateData() {
 
-	d3.json("http://35.188.184.73/Circles/Circles/10", function(
+	d3.json("http://35.211.183.112/Circles/Circles/10", function(
 			error, data) {
 		if (error) {
 			console.log(error)
