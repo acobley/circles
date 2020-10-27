@@ -40,6 +40,6 @@ Date date = new Date();%>
                 }%>
         </ul>
         <p>&copy; Andy Cobley @ Computing dundee university.</p>
-        <p>Master Branch. (Rebase before lecture)</p>
+        <p>Master Branch. (ReBase before lecture)</p>
     </body>
 </html>
