@@ -36,7 +36,7 @@ function d3Update(dataset){
 	.data(dataset)
 	.transition()
 	.duration(2000)
-	.ease("bounce");
+	.ease("Circle");
 
 	circles.attr("cx", function(d){
 	    return d.x;
@@ -58,7 +58,7 @@ function loadData(){
 		
 		updateData();
 	});
-   d3.json("http://35.211.183.112/Circles/Circles/20",function(error,data){
+   d3.json("http://35.233.33.123/Circles/Circles/10",function(error,data){
    if (error){
       console.log(error)
    }else{
@@ -70,7 +70,7 @@ function loadData(){
  
 function updateData(){
   
-   d3.json("http://35.211.183.112/Circles/Circles/20",function(error,data){
+   d3.json("http://35.233.33.123/Circles/Circles/10",function(error,data){
    if (error){
       console.log(error)
    }else{

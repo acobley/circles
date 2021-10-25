@@ -1,19 +1,17 @@
 package uk.ac.dundee.computing.aec.lib;
 
+import com.eaio.uuid.UUID;
 import java.net.URLDecoder;
 import java.util.StringTokenizer;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 public final class Convertors {
 	public void Convertors(){
 		
 	}
 	
-	public static java.util.UUID getTimeUUID()
-    {
-            return java.util.UUID.fromString(new com.eaio.uuid.UUID().toString());
-    }
+	
  
  public static byte[] asByteArray(java.util.UUID uuid)
     {
