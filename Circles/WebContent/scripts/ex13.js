@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 var svg;
 function d3Draw(dataset){
@@ -30,8 +30,8 @@ circles.attr("cx", function(d){
 } )
 .attr("r", function(d){
     return d.r;
-} );  
-   
+} );
+
 }
 
 
@@ -48,8 +48,8 @@ function d3Update(dataset){
 	} )
 	.attr("r", function(d){
 	    return d.r;
-	} );  
-	   
+	} );
+
 	}
 
 function loadData(){
@@ -57,10 +57,10 @@ function loadData(){
 
 	d3.select("p")
 	.on("click",function(){
-		
+
 		updateData();
 	});
-   d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles/10",function(error,data){
+   d3.json("http://35.241.142.116/Circles/Circles/10",function(error,data){
    if (error){
       console.log(error)
    }else{
@@ -69,10 +69,10 @@ function loadData(){
    }
    );
 }
- 
+
 function updateData(){
 
-   d3.json("http://ac32007.cloudapp.net:8080/Circles/Circles/10",function(error,data){
+   d3.json("http://35.241.142.116/Circles/Circles/10",function(error,data){
    if (error){
       console.log(error)
    }else{
@@ -83,4 +83,3 @@ function updateData(){
 }
 
 window.onload= loadData;
-

@@ -28,7 +28,7 @@ function loadData() {
 
 		loadData();
 	});
-	d3.json("http://35.233.33.123//Circles/Circles/10", function(
+	d3.json("http://34.78.46.186//Circles/Circles/10", function(
 			error, data) { 
 		if (error) {
 			console.log(error)
