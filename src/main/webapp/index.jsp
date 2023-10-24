@@ -41,5 +41,6 @@ Date date = new Date();%>
         </ul>
         <p>&copy; Andy Cobley @ Computing dundee university.</p>
         <p>Master Branch. (Change 19 Oct 2023)</p>
+<>altered in lecture</p>
     </body>
 </html>
