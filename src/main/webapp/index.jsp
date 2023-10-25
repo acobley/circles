@@ -44,8 +44,7 @@ Date date = new Date();%>
 
 
 <p>from laptop</p>   </body>
-=======
-<>altered in lecture</p>
+<p>altered in lecture</p>
     </body>
 
 </html>
